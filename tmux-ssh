@@ -70,7 +70,6 @@ sshIntoNodes() {
             KUBECTL_SSH_COMMAND="${KUBECTL_SSH_COMMAND} ${SSH_USERNAME}@${IP}"
         fi
 
-
         if [ -n "${SSH_PORT}" ]; then
             KUBECTL_SSH_COMMAND="${KUBECTL_SSH_COMMAND} -p ${SSH_PORT}"
         fi
