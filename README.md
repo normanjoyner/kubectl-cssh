@@ -17,6 +17,7 @@ git clone git@github.com:normanjoyner/kubectl-tmux-ssh.git ~/.kube/plugins/kubec
 tmux-ssh allows users to SSH into Kubernetes nodes by opening a new pane for each matching node
 
 Options:
+  -a, --address-type='ExternalIP': Node address type to query for (e.g. InternalIP/ExternalIP)
   -i, --identity-file='': Selects a file from which the identity (private key) for public key authentication is read
   -l, --selector='': Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)
   -p, --ssh-port='': SSH port
@@ -37,4 +38,9 @@ kubectl plugin tmux-ssh
 SSH into master nodes only:
 ```
 kubectl plugin tmux-ssh -l node-role.kubernetes.io/master=""
+```
+
+SSH into master nodes in private network topologies:
+```
+kubectl plugin tmux-ssh -l "kubernetes.io/role=master" -a "InternalIP"
 ```
