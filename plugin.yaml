@@ -15,3 +15,7 @@ flags:
   - name: "ssh-username"
     shorthand: "u"
     desc: "SSH Username"
+  - name: "address-type"
+    shorthand: "a"
+    desc: "Node address type to query for (e.g. InternalIP/ExternalIP)"
+    defValue: "ExternalIP"
