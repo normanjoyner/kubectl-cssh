@@ -8,7 +8,7 @@ A kubectl plugin to ssh into Kubernetes nodes within separate tmux panes
 ### Installation
 Add `kubectl-tmux-ssh` to your `kubectl` plugins directory. For more information about how plugins are loaded, please see the [official documentation](https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/).
 ```
-git clone git@github.com:normanjoyner/kubectl-tmux-ssh.git ~/.kube/plugins/kubectl-tmux-ssh
+git clone git@github.com:brosandilabs/kubectl-tmux-ssh.git ~/.kube/plugins/kubectl-tmux-ssh
 ```
 
 ### Usage
