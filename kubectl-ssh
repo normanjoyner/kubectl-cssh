@@ -1,11 +1,12 @@
 #!/bin/sh
 
 TMUX_SESSION_NAME=$(tmux display-message -p "#S")
-SELECTOR=$KUBECTL_PLUGINS_LOCAL_FLAG_SELECTOR
-SSH_IDENTITY_FILE=$KUBECTL_PLUGINS_LOCAL_FLAG_IDENTITY_FILE
-SSH_USERNAME=$KUBECTL_PLUGINS_LOCAL_FLAG_SSH_USERNAME
-SSH_PORT=$KUBECTL_PLUGINS_LOCAL_FLAG_SSH_PORT
-ADDRESS_TYPE=$KUBECTL_PLUGINS_LOCAL_FLAG_ADDRESS_TYPE
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+source $DIR/parse-args.sh
+
+# set environment variable defaults
+ADDRESS_TYPE=${ADDRESS_TYPE:-ExternalIP}
 
 # creates a new tmux window
 createNewTmuxWindow() {
