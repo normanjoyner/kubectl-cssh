@@ -2,7 +2,14 @@
 
 TMUX_SESSION_NAME=$(tmux display-message -p "#S")
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+EXECUTABLE=${BASH_SOURCE[0]}
+
+if readlink ${EXECUTABLE} > /dev/null 2>&1; then
+    EXECUTABLE=$(readlink ${EXECUTABLE})
+fi
+
+DIR="$(cd "$( dirname "${EXECUTABLE}" )" >/dev/null && pwd)"
+
 source $DIR/parse-args.sh
 
 # set environment variable defaults
