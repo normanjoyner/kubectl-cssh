@@ -77,6 +77,12 @@ while :; do
 		--address-type=)
 			die '"--address-type" requires a non-empty option'
 			;;
+        --synchronize)
+            SYNCHRONIZE_PANES=1
+            ;;
+        --no-synchronize)
+            SYNCHRONIZE_PANES=0
+            ;;
         -h|--help)
             HELP_TEXT="$(cat <<-EOF
 Allows users to SSH into Kubernetes nodes by opening a new tmux pane for each matching node
@@ -95,8 +101,8 @@ EOF
 
             die "$HELP_TEXT"
             ;;
-		*)
-			break
+        *)
+            break
 	esac
 
 	shift

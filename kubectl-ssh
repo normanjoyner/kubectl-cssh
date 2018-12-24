@@ -1,7 +1,8 @@
 #!/bin/sh
 
-TMUX_SESSION_NAME=$(tmux display-message -p "#S")
-
+# default environment variables
+SYNCHRONIZE_PANES=1
+TMUX_SESSION_NAME=$(tmux display-message -p "#S" 2> /dev/null)
 EXECUTABLE=${BASH_SOURCE[0]}
 
 if readlink ${EXECUTABLE} > /dev/null 2>&1; then
@@ -107,5 +108,9 @@ ensureTmuxSessionExists
 # ssh into matching nodes
 sshIntoNodes
 
-# synchronize panes
-synchronizePanes
+# properly set synchronize-panes
+if [ ${SYNCHRONIZE_PANES} -eq 1 ]; then
+    synchronizePanes
+else
+    unsynchronizePanes
+fi
