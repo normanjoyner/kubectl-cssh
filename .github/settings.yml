@@ -1,0 +1,75 @@
+repository:
+  name: kubectl-ssh
+  description: A kubectl plugin to ssh into Kubernetes nodes within separate tmux panes
+  topics: kubernetes, kubectl, plugin, tmux, ssh, kubectl-plugins, krew
+  private: false
+  has_issues: true
+  has_projects: false
+  has_wiki: false
+  has_downloads: true
+  default_branch: master
+  allow_squash_merge: false
+  allow_merge_commit: false
+  allow_rebase_merge: true
+
+labels:
+  - name: component/security
+    description: Security related
+    color: f800a7
+  - name: status/awaiting-feedback
+    description: Needs feedback to proceed
+    color: ffcd00
+  - name: status/blocked
+    description: Blocked by another issue or pull request
+    color: ffcd00
+  - name: status/do-not-merge
+    description: Should not be merged
+    color: ffcd00
+  - name: status/needs-retested
+    description: Code needs retested
+    color: ffcd00
+  - name: status/needs-triaged
+    description: Yet to be triaged by maintainers
+    color: ffcd00
+  - name: status/stale
+    description: Stale due to inactivity
+    color: ffcd00
+  - name: status/untested
+    description: Code is untested
+    color: ffcd00
+  - name: status/wip
+    description: Work in progress
+    color: ffcd00
+  - name: type/bug
+    description: Bug
+    color: 00f4cb
+  - name: type/design-doc
+    description: Architecture design document
+    color: 00f4cb
+  - name: type/documentation
+    description: Documentation
+    color: 00f4cb
+  - name: type/feature
+    description: A new feature
+    color: 00f4cb
+  - name: type/maintenance
+    description: Codebase maintenance
+    color: 00f4cb
+  - name: type/optimization
+    description: Codebase optimization
+    color: 00f4cb
+  - name: type/question
+    description: General question
+    color: 00f4cb
+  - name: type/regression
+    description: Regression
+    color: 00f4cb
+  - name: type/release
+    description: Release
+    color: 00f4cb
+  - name: type/technical-debt
+    description: Technical debt
+    color: 00f4cb
+  - name: Epic
+    description: ZenHub Epic
+    color: ffffff
