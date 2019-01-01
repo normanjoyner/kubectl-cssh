@@ -1,0 +1,10 @@
+enabled: true
+label: type/release
+changelog:
+  ignoredLabels:
+    - type/release
+    - type/documentation
+  sections:
+    bugfixes: type/bug
+    features: type/feature
+    security: component/security
