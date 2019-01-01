@@ -103,6 +103,10 @@ EOF
 
             die "$HELP_TEXT"
             ;;
+        -v|--version)
+            echo "$KUBECTL_SSH_VERSION"
+            exit
+            ;;
 
         # handle unknown arguments as positional and save for later use
         *)

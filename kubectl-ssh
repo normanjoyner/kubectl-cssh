@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # default environment variables
+KUBECTL_SSH_VERSION=0.0.2
 SYNCHRONIZE_PANES=1
 TMUX_SESSION_NAME=$(tmux display-message -p "#S" 2> /dev/null)
 EXECUTABLE=${BASH_SOURCE[0]}
