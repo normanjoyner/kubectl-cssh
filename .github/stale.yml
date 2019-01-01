@@ -1,0 +1,13 @@
+daysUntilStale: 30
+daysUntilClose: false
+exemptLabels:
+  - status/blocked
+exemptProjects: false
+exemptMilestones: false
+exemptAssignees: false
+staleLabel: status/stale
+markComment: >
+  This issue has been automatically marked as stale due to lack of activity.
+  It may be closed by the maintainers if no further activity occurs.
+unmarkComment: >
+  Thank you for updating this issue. I will remove the stale label.
