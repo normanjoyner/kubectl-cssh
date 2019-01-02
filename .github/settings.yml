@@ -16,6 +16,9 @@ labels:
   - name: component/security
     description: Security related
     color: f800a7
+  - name: component/test
+    description: Testing related
+    color: f800a7
   - name: status/awaiting-feedback
     description: Needs feedback to proceed
     color: ffcd00
