@@ -76,3 +76,9 @@ labels:
   - name: Epic
     description: ZenHub Epic
     color: ffffff
+  - name: good first issue
+    description: Good for newcomers
+    color: 34fa00
+  - name: help wanted
+    description: Request for help from the community
+    color: 34fa00
