@@ -97,7 +97,7 @@ Options:
   -u, --username='': SSH Username
 
 Usage:
-  kubectl ssh [flags] [options]
+  kubectl cssh [flags] [options]
 EOF
 )"
 

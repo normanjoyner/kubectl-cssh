@@ -17,5 +17,5 @@ If you have an idea for a change or new feature that's nontrivial, please consid
 ## New Contributors
 
 If you're an aspiring new contributor to this project, welcome!
-We use the standard GitHub labels for calling out [good first issues](https://github.com/containership/kubectl-ssh/labels/good%20first%20issue).
+We use the standard GitHub labels for calling out [good first issues](https://github.com/containership/kubectl-cssh/labels/good%20first%20issue).
 Check those out as a good place to start!
