@@ -1,4 +1,4 @@
-# kubectl-ssh
+# kubectl-cssh
 
 ## About
 
@@ -6,14 +6,14 @@
 A kubectl plugin to SSH into Kubernetes nodes within separate tmux panes
 
 ### Installation
-Add `kubectl-ssh` to your `$PATH`. For more information about how plugins are loaded, please see the [official documentation](https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/).
+Add `kubectl-cssh` to your `$PATH`. For more information about how plugins are loaded, please see the [official documentation](https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/).
 ```
-git clone git@github.com:containership/kubectl-ssh.git ~/.kube/plugins/kubectl-ssh
+git clone git@github.com:containership/kubectl-cssh.git ~/.kube/plugins/kubectl-cssh
 ```
 
 ### Usage
 ```
- > kubectl ssh --help
+ > kubectl cssh --help
 Allows users to SSH into Kubernetes nodes by opening a new tmux pane for each matching node
 
 Options:
@@ -24,23 +24,23 @@ Options:
   -u, --username='': SSH Username
 
 Usage:
-  kubectl ssh [flags] [options]
+  kubectl cssh [flags] [options]
 ```
 
 ### Examples
 SSH into all nodes in the cluster:
 ```
-kubectl ssh
+kubectl cssh
 ```
 
 SSH into master nodes only:
 ```
-kubectl ssh -l node-role.kubernetes.io/master=""
+kubectl cssh -l node-role.kubernetes.io/master=""
 ```
 
 SSH into master nodes in private network topologies:
 ```
-kubectl ssh -l "kubernetes.io/role=master" -a "InternalIP"
+kubectl cssh -l "kubernetes.io/role=master" -a "InternalIP"
 ```
 
 ## Contributing
