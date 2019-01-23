@@ -5,8 +5,16 @@
 ### Description
 A kubectl plugin to SSH into Kubernetes nodes within separate tmux panes
 
+### Prerequisites
+In its current form, `kubectl-cssh` requires [tmux](https://github.com/tmux/tmux) to be installed and running to work properly. We are [considering alternative fallback functionality](https://github.com/containership/kubectl-cssh/issues/20) to support users without `tmux`.
+
 ### Installation
-Add `kubectl-cssh` to your `$PATH`. For more information about how plugins are loaded, please see the [official documentation](https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/).
+The preferred way to install `kubectl-cssh` is through [krew](https://github.com/GoogleContainerTools/krew). After following the [installation documentation](https://github.com/GoogleContainerTools/krew#installation), you can install `kubectl-cssh`.
+```
+kubectl krew install cssh
+```
+
+If you'd like to install the plugin manually, simply add `kubectl-cssh` to your `$PATH`. For more information about how plugins are loaded, please see the [official documentation](https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/).
 ```
 git clone git@github.com:containership/kubectl-cssh.git ~/.kube/plugins/kubectl-cssh
 ```
